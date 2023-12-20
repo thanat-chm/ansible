@@ -1,0 +1,12 @@
+---
+- hosts: all
+
+  become: true
+
+  tasks:
+          - name: Disk usage from command module
+            command: uname -r
+            register: kernel
+          - name: Print Kernel Version
+            debug:
+                 msg: "{{ kernel }}"
