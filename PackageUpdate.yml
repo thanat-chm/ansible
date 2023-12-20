@@ -1,5 +1,5 @@
 ---
-- hosts: pik-server
+- hosts: all
 
   become: true
 
