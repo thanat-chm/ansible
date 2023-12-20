@@ -5,7 +5,7 @@
 
   tasks:
           - name: Disk usage from command module
-            command: uname -r
+            command: lsb_release -a
             register: kernel
           - name: Print Kernel Version
             debug:
