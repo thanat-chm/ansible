@@ -6,6 +6,3 @@
   tasks:
           - name: Disk usage from command module
             shell: df -h
-            register: space
-          - debug:
-                  var: space
