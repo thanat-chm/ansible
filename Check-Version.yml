@@ -4,9 +4,9 @@
   become: true
 
   tasks:
-          - name: Disk usage from command module
+          - name: Check OS Version
             command: lsb_release -a
-            register: kernel
-          - name: Print Kernel Version
+            register: os-version
+          - name: Print OS Version
             debug:
-                 msg: "{{ kernel.stdout_lines }}"
+                 msg: "{{ os-version.stdout_lines }}"
