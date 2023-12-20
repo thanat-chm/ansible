@@ -5,8 +5,8 @@
 
   tasks:
           - name: Check OS Version
-            command: lsb_release -a
-            register: os-version
+            command: lsb_release -d
+            register: version
           - name: Print OS Version
             debug:
-                 msg: "{{ os-version.stdout_lines }}"
+                 msg: "{{ version.stdout_lines }}"
