@@ -9,4 +9,4 @@
             register: kernel
           - name: Print Kernel Version
             debug:
-                 msg: "{{ kernel }}"
+                 msg: "{{ kernel.stdout_lines }}"
